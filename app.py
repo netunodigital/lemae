@@ -19,3 +19,6 @@ def about():
     entries = client.entries()
 
     return render_template('sobre.html', members=entries)
+
+if __name__=="__main__":
+    app.run(debug=False, host="0.0.0.0")
