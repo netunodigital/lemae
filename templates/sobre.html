@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>LEMAE</title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/styles.css') }}">
+        <meta charset="utf-8">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            #logo {
+                background-image: url("{{ url_for('static',filename='img/logo.svg') }}");
+                background-size: cover;
+                cursor: pointer;
+            }
+            #hamburger {
+                background: url("{{ url_for('static',filename='img/hamburger.svg') }}");
+            }
+            #x {
+                background: url("{{ url_for('static',filename='img/x.svg') }}");
+            }
+            #footer {
+                background: url("{{ url_for('static',filename='img/footer-bg.svg') }}");
+                background-size: cover;
+                background-position: center;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="header2">
+            <div id="logo"></div>
+            <div id="hamburger">
+            </div>
+            <h2 class="title">Quem Somos</h2>
+        </section>
+        <section id="container">
+            <div class="content">
+                <div class="container-card">
+                    <h3 class="subtitle">Missão e Valores</h3>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum urna id lorem elementum, sit amet sodales lacus sagittis. Etiam quis lacus vel dolor volutpat tempor. Quisque vulputate est eu venenatis sollicitudin. Vestibulum maximus pulvinar lectus in eleifend. Sed lacinia placerat tristique. Mauris a eros vel odio ornare rhoncus vel in arcu. Duis est dui, pretium ac augue in, pretium tempor nulla. Aliquam nec finibus erat. Nullam maximus eu quam in consequat.
+                        <br><br>
+                        Donec at diam ac turpis accumsan ullamcorper eget et eros. Nulla rhoncus ex neque, et condimentum dolor accumsan in. Donec pellentesque, nisl quis tempus accumsan, mauris leo ultrices tellus, vel accumsan velit urna vitae arcu. In non lobortis sapien. Quisque a nulla diam. Nam eleifend turpis a tellus porta, in hendrerit velit tincidunt. Vestibulum tristique felis sed egestas semper. Sed ut purus posuere arcu mattis tristique gravida ac libero.
+                    </p>
+                </div>
+                <div class="container-card">
+                    <h3 class="subtitle">Coordenação</h3>
+                    <div class="membros">
+                        <div class="member">
+                            <img class="photo" src="{{ url_for('static',filename='img/membro.png') }}">
+                            <div class="info">
+                                <span class="name">Michelle Jakeline Cunha Rezende</span>
+                                <span class="cargo">Coordenadora</span>
+                                <span class="lattes">LATTES</span>
+                            </div>
+                        </div>
+                        <div class="member">
+                            <img class="photo" src="{{ url_for('static',filename='img/membro.png') }}">
+                            <div class="info"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-card">
+                    <h3 class="subtitle">Equipe</h3>
+                    <div class="membros">
+                        {% for member in members %}
+                        <div class="member">
+                            <img class="photo" src="{{ member.photo.url() }}">
+                            <div class="info">
+                                <span class="name">{{ member.name }}</span>
+                                <span class="cargo">{{ member.role }}</span>
+                                <span class="lattes">LATTES</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="container-card">
+                    <h3 class="subtitle">Egressos</h3>
+                </div>
+            </div>
+        </section>
+        <section id="footer" style="margin-top: -50px;">
+            <div class="content" style="margin-top: 250px;">
+                <p>Quer mais informações ou tem interesse por novos projetos?</p>
+                <br><br>
+                <button class="s-button">FALE COM A GENTE</button>
+                <div class="info">
+                    <p>Todos os direitos reservados © 2022</p>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

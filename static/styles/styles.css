@@ -1,0 +1,284 @@
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                font-family: 'Raleway';
+            }
+            body {
+                background-color: #E9F7F8;
+            }
+            #home {
+                width: 100%;
+                height: 100vh;
+            }
+            #header {
+                width: 100%;
+                height: 110px;
+            }
+            #hamburger {
+                width: 68px;
+                height: 30px;
+                margin: 40px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                cursor: pointer;
+                transform: all 0.5s;
+            }
+            #x {
+                width: 51px;
+                height: 51px;
+                margin: 31px 50px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                cursor: pointer;
+            }
+
+            .content {
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .title {
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 35px;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: #FF9000;
+                margin-bottom: 30px;
+            }
+
+            .subtitle {
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 26px;
+                letter-spacing: 0.05em; 
+                text-transform: uppercase;
+            }
+
+            .text {
+                font-family: 'Raleway';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+                text-align: justify;
+            }
+            .p-button {
+                font-family: 'Raleway';
+                height: 50px;
+                background-color: #DEEDEE;
+                border: none;
+                padding: 0 35px;
+                border-radius: 25px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 24px;
+                color: #2B5FA7;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            .p-button:hover {
+                background-color: #2B5FA7;
+                color: #fff;
+            }
+            .s-button {
+                font-family: 'Raleway';
+                height: 50px;
+                background-color: #fff;
+                border: none;
+                padding: 0 35px;
+                border-radius: 25px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 24px;
+                color: #2B5FA7;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            .s-button:hover {
+                background-color: #fff;
+                color: #FF9000;
+            }
+
+            #about {
+                width: 100%;
+                padding: 80px 0;
+                box-shadow: 7px 7px 23px rgba(0, 0, 0, 0.05);
+                background-color: #fff;
+            }
+
+            #home-cards {
+                padding: 70px 0;
+            }
+            #home-cards .l1,
+            #home-cards .l2,
+            #home-cards .instagram {
+                width: 100%;
+                display: flex;
+            }
+            #home-cards .home-card {
+                width: 480px;
+                height: 320px;
+                background-color: #fff;
+                box-shadow: 7px 7px 23px rgba(0, 0, 0, 0.05);
+                border-radius: 15px;
+                padding: 40px 50px;
+                transition: all 0.5s;
+                cursor: pointer;
+                position: relative;
+            }
+            #home-cards .home-card:hover {
+                transform: scale(1.05);
+            }
+            .home-card:hover > .subsubtitle {
+                color: #FF9000;
+            }
+            #home-cards .l1,
+            #home-cards .l2 {
+                margin-bottom: 40px;
+            }
+            #home-cards .l1 .c1,
+            #home-cards .l2 .c3 {
+                margin-right: 40px;
+            }
+            #home-cards .instagram .c5 {
+                width: 100%;
+                background-color: #fff;
+                box-shadow: 7px 7px 23px rgba(0, 0, 0, 0.05);
+                border-radius: 15px;
+                padding: 40px 50px;
+                height: 400px;
+            }
+            .subsubtitle {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 21px;
+                text-align: center;
+                letter-spacing: 0.05em;
+                color: #2D5FA6;
+            }
+            #home-cards .subsubtitle {
+                position: absolute;
+                width: 100%;
+                bottom: 40px;
+                left: 0;
+            }
+            #home-cards .home-card .icon {
+                position: absolute;
+                left: 180px;
+                top: 100px;
+                width: 110px;
+            }
+            #footer {
+                width: 100%;
+                background-size: cover;
+                padding: 40px;
+                height: 560px;
+            }
+            #footer .content {
+                text-align: center;
+            }
+            #footer .content p {
+                color: #fff;
+                font-size: 18px;
+            }
+            #footer .content .info {
+                background-color: #fff;
+                margin-top: 60px;
+                height: 100px;
+                box-shadow: 7px 7px 23px rgba(0, 0, 0, 0.05);
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+            }
+            #hide-menu {
+                position: fixed;
+                right: 0;
+                top: 0;
+                height: 100vh;
+                width: 500px;
+                background-color: #fff;
+                z-index: 1;
+                display: none;
+            }
+            
+
+            #header2 {
+                height: 180px;
+                background-color: #fff;
+                box-shadow: 7px 7px 23px rgba(0, 0, 0, 0.05);
+                padding: 30px;
+            }
+            #logo {
+                width: 200px;
+                height: 80px;
+                margin: 0 20px;
+                top: 0;
+                left: 0;
+            }
+            #header2 .title {
+                text-align: center;
+            }
+
+            #container .container-card {
+                width: 100%;
+                background-color: #fff;
+                box-shadow: 7px 7px 23px rgba(0, 0, 0, 0.05);
+                border-radius: 15px;
+                padding: 40px 50px;
+                transition: all 0.5s;
+                position: relative;
+                margin-top: 40px;
+            }
+            #container .container-card .subtitle {
+                color: #2B5FA7;
+                margin: 0 0 20px;
+            }
+            #container .container-card .text {
+            }
+
+            .membros {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .member {
+                width: 50%;
+                height: 150px;
+                display: flex;
+            }
+            .member .photo {
+                height: 150px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            .member .info {
+                width: calc(100% - 190px);
+                height: 150px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0 20px;
+            }
+            .member .info .name {
+                font-weight: 600;
+            }
+            .member .info .cargo {
+                color: #2B5FA7;
+                font-weight: 500;
+                margin: 5px 0 30px
+            }
+            .member .info .lattes {
+                color: #FF9000;
+                text-transform: uppercase;
+                font-weight: 600;
+                cursor: pointer;
+            }
