@@ -27,7 +27,7 @@
             #x {
                 width: 51px;
                 height: 51px;
-                margin: 31px 50px;
+                margin: 51px 50px;
                 position: absolute;
                 right: 0;
                 top: 0;
@@ -184,8 +184,8 @@
             #footer {
                 width: 100%;
                 background-size: cover;
-                padding: 40px;
-                height: 560px;
+                padding: 40px 40px 0;
+                height: 530px;
             }
             #footer .content {
                 text-align: center;
@@ -195,24 +195,54 @@
                 font-size: 18px;
             }
             #footer .content .info {
-                background-color: #fff;
                 margin-top: 60px;
-                height: 100px;
-                box-shadow: 7px 7px 23px rgba(0, 0, 0, 0.05);
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            #footer .content .info p {
+                text-align: right;
+                font-size: 12px;
+            }
+            #footer .content .info img {
+                height: 40px;
             }
             #hide-menu {
                 position: fixed;
-                right: 0;
+                right: -550px;
                 top: 0;
                 height: 100vh;
                 width: 500px;
                 background-color: #fff;
                 z-index: 1;
-                display: none;
+                transition: all 0.8s ease-in-out;
+                box-shadow: 3px 3px 30px rgba(0, 0, 0, 0.10);
             }
-            
+            .show-menu {
+                right: 0 !important;
+            }
+            .vertical-menu {
+                margin: 150px 0 0 50px;
+                width: 300px; /* Set a width if you like */
+              }
+              
+              .vertical-menu a {
+                font-size: 22px;
+                color: #2B5FA7; /* Black text color */
+                display: block; /* Make the links appear below each other */
+                text-decoration: none; /* Remove underline from links */
+                margin: 30px 0;
+                transition: all 0.5s;
+              }
+              
+              .vertical-menu a:hover {
+                color: #FF9000;
+              }
+              
+              .vertical-menu a.active {
+                /* color: white; */
+              }
 
             #header2 {
                 height: 180px;

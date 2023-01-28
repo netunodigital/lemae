@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block page_title %}{{ title }}{% endblock %}
+{% block head %}
+{% endblock %}
+{% block content %}
+        <section id="container">
+            <div class="content">
+                <div class="container-card">
+                    <h3 class="subtitle">Teses e Dissertações</h3>
+                </div>
+                <div class="container-card">
+                    <h3 class="subtitle">Artigos</h3>
+                </div>
+                <div class="container-card">
+                    <h3 class="subtitle">Livros</h3>
+                </div>
+                <div class="container-card">
+                    <h3 class="subtitle">Prêmios</h3>
+                </div>
+            </div>
+        </section>
+        {% include 'footer.html' %}
+    </body>
+</html>
+{% endblock %}

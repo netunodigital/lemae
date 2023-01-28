@@ -1,17 +1,46 @@
 <!doctype html>
 <html>
   <head>
-    {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>{% block title %}{% endblock %} - My Webpage</title>
-    {% endblock %}
+            <title>{% block title %}{% endblock %} - LEMAE</title>
+            <link rel="stylesheet" href="{{ url_for('static',filename='styles/styles.css') }}">
+            <meta charset="utf-8">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+                #logo {
+                    background-image: url("{{ url_for('static',filename='img/logo.svg') }}");
+                    background-size: cover;
+                    cursor: pointer;
+                }
+                #hamburger {
+                    background: url("{{ url_for('static',filename='img/hamburger.svg') }}");
+                }
+                #x {
+                    background: url("{{ url_for('static',filename='img/x.svg') }}");
+                }
+                #footer {
+                    background: url("{{ url_for('static',filename='img/footer-bg.svg') }}");
+                    background-size: cover;
+                    background-position: top;
+                    margin-top: -100px !important;
+                }
+            </style>
+            {% block head %}
+            {% endblock %}
   </head>
+  {% block script %}
+  {% endblock %}
   <body>
-    <div id="content">{% block content %}{% endblock %}</div>
-    <div id="footer">
-      {% block footer %}
-      &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
-      {% endblock %}
-    </div>
+    <section id="header2">
+        <div id="logo" onclick="javascript:location.href = '/'"></div>
+        {% include 'menu.html' %}
+        <h2 class="title">{% block page_title %}{% endblock %}</h2>
+    </section>
+    {% block content %}{% endblock %}
+    <script>
+        function showhide(id) {
+            var e = document.getElementById(id);
+            e.classList.toggle("show-menu");
+        }
+    </script>
   </body>
 </html>

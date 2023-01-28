@@ -1,36 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <title>LEMAE</title>
-        <link rel="stylesheet" href="{{ url_for('static',filename='styles/styles.css') }}">
-        <meta charset="utf-8">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-            #logo {
-                background-image: url("{{ url_for('static',filename='img/logo.svg') }}");
-                background-size: cover;
-                cursor: pointer;
-            }
-            #hamburger {
-                background: url("{{ url_for('static',filename='img/hamburger.svg') }}");
-            }
-            #x {
-                background: url("{{ url_for('static',filename='img/x.svg') }}");
-            }
-            #footer {
-                background: url("{{ url_for('static',filename='img/footer-bg.svg') }}");
-                background-size: cover;
-                background-position: center;
-            }
-        </style>
-    </head>
-    <body>
-        <section id="header2">
-            <div id="logo"></div>
-            <div id="hamburger">
-            </div>
-            <h2 class="title">Quem Somos</h2>
-        </section>
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block page_title %}{{ title }}{% endblock %}
+{% block head %}
+{% endblock %}
+{% block content %}
         <section id="container">
             <div class="content">
                 <div class="container-card">
@@ -78,15 +51,7 @@
                 </div>
             </div>
         </section>
-        <section id="footer" style="margin-top: -50px;">
-            <div class="content" style="margin-top: 250px;">
-                <p>Quer mais informações ou tem interesse por novos projetos?</p>
-                <br><br>
-                <button class="s-button">FALE COM A GENTE</button>
-                <div class="info">
-                    <p>Todos os direitos reservados © 2022</p>
-                </div>
-            </div>
-        </section>
+        {% include 'footer.html' %}
     </body>
 </html>
+{% endblock %}

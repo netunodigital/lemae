@@ -26,12 +26,10 @@
         <script src="https://w.behold.so/widget.js" type="module"></script>
     </head>
     <body>
-        <div id="hide-menu">
-            <div id="x">
-            </div>
-        </div>
         <section id="home">
-            {% include 'menu.html' %}
+            <div id="header">
+                {% include 'menu.html' %}
+            </div>
         </section>
         <section id="about">
             <div class="content">
@@ -41,21 +39,21 @@
                     <br><br>
                     Donec at diam ac turpis accumsan ullamcorper eget et eros. Nulla rhoncus ex neque, et condimentum dolor accumsan in. Donec pellentesque, nisl quis tempus accumsan, mauris leo ultrices tellus, vel accumsan velit urna vitae arcu. In non lobortis sapien. Quisque a nulla diam. Nam eleifend turpis a tellus porta, in hendrerit velit tincidunt. Vestibulum tristique felis sed egestas semper. Sed ut purus posuere arcu mattis tristique gravida ac libero.
                 </p>
-                <button class="p-button" style="display: block; margin: 30px auto 0;">SAIBA MAIS SOBRE O LABORATÓRIO</button>
+                <button class="p-button" onclick="javascript:location.href = '/quem-somos'" style="display: block; margin: 30px auto 0;">SAIBA MAIS SOBRE O LABORATÓRIO</button>
             </div>
         </section>
         <section id="home-cards">
             <div class="content">
                 <div class="l1">
                     <div class="home-card c1">
-                        <div class="card-content">
+                        <div class="card-content" onclick="javascript:location.href = '/linhas-de-pesquisa'">
                             <h3 class="subtitle">Linhas de Pesquisa</h3>
                             <img class="icon" src="{{ url_for('static',filename='img/lupa.svg') }}">
                             <h4 class="subsubtitle">CONHEÇA NOSSAS LINHAS DE PESQUISA</h4>
                         </div>
                     </div>
                     <div class="home-card c2">
-                        <div class="card-content">
+                        <div class="card-content" onclick="javascript:location.href = '/producao-cientifica'">
                             <h3 class="subtitle">Produção Científica</h3>
                             <h4 class="subsubtitle">VEJA NOSSAS PRODUÇÕES</h4>
                             <img class="icon" src="{{ url_for('static',filename='img/doc.svg') }}">
@@ -64,14 +62,14 @@
                 </div>
                 <div class="l2">
                     <div class="home-card c3">
-                        <div class="card-content">
+                        <div class="card-content" onclick="javascript:location.href = '/infraestrutura'">
                             <h3 class="subtitle">Infraestrutura</h3>
                             <img class="icon" src="{{ url_for('static',filename='img/predio.svg') }}">
                             <h4 class="subsubtitle">CONHEÇA O LABORATÓRIO</h4>
                         </div>
                     </div>
                     <div class="home-card c4">
-                        <div class="card-content">
+                        <div class="card-content" onclick="javascript:location.href = '/partners'">
                             <h3 class="subtitle">Parceiros</h3>
                             <img class="icon" src="{{ url_for('static',filename='img/user.svg') }}">
                             <h4 class="subsubtitle">VEJA NOSSAS PARCERIAS</h4>
@@ -82,20 +80,17 @@
                     <div class="c5">
                         <h3 class="subtitle">Instagram</h3>
                         <figure data-behold-id="Sszpjf92zjj7ttRHqeyo"></figure>
-                        <button class="p-button" style="display: block; margin: 30px auto 0;">SIGA-NOS NO INSTAGRAM</button>
+                        <button class="p-button" style="display: block; margin: 30px auto 0;"  onclick="javascript:location.href = 'http://instagram.com'">SIGA-NOS NO INSTAGRAM</button>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="footer" style="margin-top: -300px;">
-            <div class="content" style="margin-top: 250px;">
-                <p>Quer mais informações ou tem interesse por novos projetos?</p>
-                <br><br>
-                <button class="s-button">FALE COM A GENTE</button>
-                <div class="info">
-                    <p>Todos os direitos reservados © 2022</p>
-                </div>
-            </div>
-        </section>
+        {% include 'footer.html' %}
+        <script>
+            function showhide(id) {
+                var e = document.getElementById(id);
+                e.classList.toggle("show-menu");
+            }
+          </script>
     </body>
 </html>
