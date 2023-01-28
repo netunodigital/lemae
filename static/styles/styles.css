@@ -155,7 +155,10 @@
                 box-shadow: 7px 7px 23px rgba(0, 0, 0, 0.05);
                 border-radius: 15px;
                 padding: 40px 50px;
-                height: 400px;
+                height: 420px;
+            }
+            #home-cards .instagram h3 {
+                margin-bottom: 30px;
             }
             .subsubtitle {
                 font-style: normal;

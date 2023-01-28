@@ -20,9 +20,10 @@
             #footer {
                 background: url("{{ url_for('static',filename='img/footer-bg.svg') }}");
                 background-size: cover;
-                background-position: center;
+                background-position: top;
             }
         </style>
+        <script src="https://w.behold.so/widget.js" type="module"></script>
     </head>
     <body>
         <div id="hide-menu">
@@ -30,10 +31,7 @@
             </div>
         </div>
         <section id="home">
-            <div id="header">
-                <div id="hamburger">
-                </div>
-            </div>
+            {% include 'menu.html' %}
         </section>
         <section id="about">
             <div class="content">
@@ -83,6 +81,7 @@
                 <div class="instagram">
                     <div class="c5">
                         <h3 class="subtitle">Instagram</h3>
+                        <figure data-behold-id="Sszpjf92zjj7ttRHqeyo"></figure>
                         <button class="p-button" style="display: block; margin: 30px auto 0;">SIGA-NOS NO INSTAGRAM</button>
                     </div>
                 </div>
