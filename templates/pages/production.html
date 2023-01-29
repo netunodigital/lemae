@@ -8,6 +8,15 @@
             <div class="content">
                 <div class="container-card">
                     <h3 class="subtitle">Teses e Dissertações</h3>
+                    <div id="production">
+                        {% for item in production %}
+                        <div class="item">
+                            <span class="author">{{ item.author }}</span>
+                            <span class="item-title">{{ item.title }}</span><br>
+                            <span class="description"><span>{{ item.type }}</span> | Orientação: {{ item.orientation }} | Programa: {{ item.program }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
                 <div class="container-card">
                     <h3 class="subtitle">Artigos</h3>

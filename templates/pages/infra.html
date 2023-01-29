@@ -16,6 +16,14 @@
                 </div>
                 <div class="container-card">
                     <h3 class="subtitle">Equipamentos</h3>
+                    <div id="equipments">
+                        {% for item in equipments %}
+                        <div class="item">
+                            <img class="photo" src="{{ item.image.url() }}">
+                            <span class="name">{{ item.name }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </section>

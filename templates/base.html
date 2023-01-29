@@ -27,9 +27,8 @@
             {% block head %}
             {% endblock %}
   </head>
-  {% block script %}
-  {% endblock %}
   <body>
+    {% include 'menu2.html' %}
     <section id="header2">
         <div id="logo" onclick="javascript:location.href = '/'"></div>
         {% include 'menu.html' %}
@@ -42,5 +41,8 @@
             e.classList.toggle("show-menu");
         }
     </script>
+    {% include 'scripts.html' %}
+    {% block script %}
+    {% endblock %}
   </body>
 </html>

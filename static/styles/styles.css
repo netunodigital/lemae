@@ -224,14 +224,14 @@
             }
             .vertical-menu {
                 margin: 150px 0 0 50px;
-                width: 300px; /* Set a width if you like */
+                width: 300px; 
               }
               
               .vertical-menu a {
                 font-size: 22px;
-                color: #2B5FA7; /* Black text color */
-                display: block; /* Make the links appear below each other */
-                text-decoration: none; /* Remove underline from links */
+                color: #2B5FA7; 
+                display: block; 
+                text-decoration: none; 
                 margin: 30px 0;
                 transition: all 0.5s;
               }
@@ -239,10 +239,93 @@
               .vertical-menu a:hover {
                 color: #FF9000;
               }
-              
-              .vertical-menu a.active {
-                /* color: white; */
-              }
+
+            #scroll-menu {
+                position: fixed;
+                left: 0;
+                width: 100%;
+                height: 50px;
+                z-index: 10;
+                background-color: #fff;
+                box-shadow: 7px 7px 23px rgba(0, 0, 0, 0.05);
+                transition: all 0.5s;
+                display: flex;
+                justify-content: space-between;
+            }
+            .hide-scroll-menu {
+                top: -50px !important;
+            }
+            .show-scroll-menu {
+                top: 0 !important
+            }
+            #scroll-menu img {
+                cursor: pointer;
+                width: 40px;
+                margin: 0 20px; 
+            }
+            #scroll-menu .horizontal-menu {
+                width: 1100px;
+                margin: 0 20px;
+                display: flex;
+                justify-content: space-between;
+                height: 100%;
+                align-items: center;
+            }
+
+            #scroll-menu .horizontal-menu a {
+                text-decoration: none;
+                color: #2B5FA7; 
+                transition: all 0.5s;
+                font-weight: 500;
+            }
+            #scroll-menu .horizontal-menu a:hover {
+                color: #FF9000; 
+            }
+
+            #home .btns {
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 20px 15px;
+            }
+            #home .btns .language {
+                color: #fff;
+                font-size: 12px;
+                display: flex;
+            }
+            #home .btns .language .language-1 {
+                cursor: default;
+                background-color: #fff;
+                color: #2B5FA7;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                padding: 5px;
+                border-radius: 100%;
+                font-weight: 700;
+                margin: 0 5px;
+            }
+            #home .btns .language .language-0 {
+                text-decoration: none;
+                font-weight: 600;
+                color: #fff;
+                border-radius: 100%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.5s;
+                padding: 5px;
+                margin: 0 5px;
+            }
+            #home .btns .language .language-0:hover {
+                background-color: #fff;
+                color: #2B5FA7;
+            }
 
             #header2 {
                 height: 180px;
@@ -290,8 +373,10 @@
             }
             .member .photo {
                 height: 150px;
+                width: 150px;
                 border-radius: 50%;
                 overflow: hidden;
+                object-fit: cover;
             }
             .member .info {
                 width: calc(100% - 190px);
@@ -314,4 +399,63 @@
                 text-transform: uppercase;
                 font-weight: 600;
                 cursor: pointer;
+            }
+
+            #past-members {
+                width: 100%;
+            }
+            #past-members th {
+                font-weight: 500;
+            }
+            #past-members td {
+                text-align: center;
+                height: 40px;
+                width: 33%;
+            }
+
+            #equipments {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            #equipments .item {
+                width: calc(50% - 10px);
+                text-align: center;
+            }
+            #equipments .item .photo {
+                width: 100%;
+                border-radius: 15px;
+                margin: 10px 0;
+            }
+            #equipments .item .name {
+                font-weight: 500;
+            }
+
+            #production .item {
+                cursor: pointer;
+                transition: all 0.5s;
+                width: calc(100% - 15px);
+                margin-bottom: 20px;
+            }
+            
+            #production .item:hover {
+                padding-left: 10px;
+                border-left: solid 5px #FF9000;
+            }
+
+            #production .author {
+                font-weight: 600;
+                margin-right: 10px;
+                font-size: 18px;                
+            }
+            #production .item-title {
+                font-size: 18px;
+
+            }
+            #production .description {
+                display: inline-block;
+            }
+            #production .description span {
+                font-weight: 500;
+                color: #2B5FA7;
             }

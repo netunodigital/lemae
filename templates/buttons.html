@@ -1,0 +1,11 @@
+<div class="btns">
+    <div class="language">
+    {% for language in AVAILABLE_LANGUAGES.items() %}
+    {% if CURRENT_LANGUAGE == language[0] %}
+        <span class="language-1">{{ language[1] }}</span>
+    {% else %}
+        <a class="language-0" href="{{ url_for('set_language', language=language[0]) }}" >{{ language[1] }}</a>
+    {%  endif %}
+    {% endfor %}
+    </div>
+</div>

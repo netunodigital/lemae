@@ -1,0 +1,92 @@
+# English translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-01-28 12:10-0300\n"
+"PO-Revision-Date: 2023-01-29 13:21-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: templates/footer.html:3
+msgid "Quer mais informações ou tem interesse por novos projetos?"
+msgstr ""
+
+#: templates/footer.html:5
+msgid "FALE COM A GENTE"
+msgstr ""
+
+#: templates/footer.html:8
+msgid "Todos os direitos reservados © 2022"
+msgstr ""
+
+#: templates/index.html:36 templates/menu.html:7
+msgid "Quem Somos"
+msgstr "About Us"
+
+#: templates/index.html:52
+msgid "CONHEÇA NOSSAS LINHAS DE PESQUISA"
+msgstr ""
+
+#: templates/index.html:57 templates/menu.html:11
+msgid "Produção Científica"
+msgstr ""
+
+#: templates/index.html:58
+msgid "VEJA NOSSAS PRODUÇÕES"
+msgstr ""
+
+#: templates/index.html:66 templates/menu.html:9
+msgid "Infraestrutura"
+msgstr ""
+
+#: templates/index.html:68
+msgid "CONHEÇA O LABORATÓRIO"
+msgstr ""
+
+#: templates/index.html:73 templates/menu.html:12
+msgid "Parceiros"
+msgstr ""
+
+#: templates/index.html:75
+msgid "VEJA NOSSAS PARCERIAS"
+msgstr ""
+
+#: templates/index.html:81
+msgid "Instagram"
+msgstr ""
+
+#: templates/index.html:83
+msgid "SIGA-NOS NO INSTAGRAM"
+msgstr ""
+
+#: templates/menu.html:6
+msgid "Início"
+msgstr ""
+
+#: templates/menu.html:8
+msgid "Linhas de Pesquisa"
+msgstr ""
+
+#: templates/menu.html:10
+msgid "Produtos Desenvolvidos"
+msgstr ""
+
+#: templates/menu.html:13
+msgid "Links"
+msgstr ""
+
+#: templates/menu.html:14
+msgid "Contato"
+msgstr ""
+

@@ -48,6 +48,22 @@
                 </div>
                 <div class="container-card">
                     <h3 class="subtitle">Egressos</h3>
+                    <div class="egressos">
+                        <table id="past-members">
+                            <thead>
+                                <th>Nome</th>
+                                <th>Atuação</th>
+                                <th>Local de Trabalho Atual</th>
+                            </thead>
+                        {% for member in past_members %}
+                        <tr>
+                            <td class="name">{{ member.name }}</td>
+                            <td class="cargo">{{ member.role }}</td>
+                            <td class="cargo">{{ member.workplace }}</td>
+                        </tr>
+                        {% endfor %}
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>

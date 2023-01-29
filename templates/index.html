@@ -26,14 +26,16 @@
         <script src="https://w.behold.so/widget.js" type="module"></script>
     </head>
     <body>
+        {% include 'menu2.html' %}
         <section id="home">
-            <div id="header">
+                <div id="header">
+                {% include 'buttons.html' %}
                 {% include 'menu.html' %}
             </div>
         </section>
         <section id="about">
             <div class="content">
-                <h2 class="title">Quem Somos</h2>
+                <h2 class="title">{{ _('Quem Somos') }}</h2>
                 <p class="text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum urna id lorem elementum, sit amet sodales lacus sagittis. Etiam quis lacus vel dolor volutpat tempor. Quisque vulputate est eu venenatis sollicitudin. Vestibulum maximus pulvinar lectus in eleifend. Sed lacinia placerat tristique. Mauris a eros vel odio ornare rhoncus vel in arcu. Duis est dui, pretium ac augue in, pretium tempor nulla. Aliquam nec finibus erat. Nullam maximus eu quam in consequat.
                     <br><br>
@@ -49,13 +51,13 @@
                         <div class="card-content" onclick="javascript:location.href = '/linhas-de-pesquisa'">
                             <h3 class="subtitle">Linhas de Pesquisa</h3>
                             <img class="icon" src="{{ url_for('static',filename='img/lupa.svg') }}">
-                            <h4 class="subsubtitle">CONHEÇA NOSSAS LINHAS DE PESQUISA</h4>
+                            <h4 class="subsubtitle">{{ _('CONHEÇA NOSSAS LINHAS DE PESQUISA') }}</h4>
                         </div>
                     </div>
                     <div class="home-card c2">
                         <div class="card-content" onclick="javascript:location.href = '/producao-cientifica'">
-                            <h3 class="subtitle">Produção Científica</h3>
-                            <h4 class="subsubtitle">VEJA NOSSAS PRODUÇÕES</h4>
+                            <h3 class="subtitle">{{ _('Produção Científica') }}</h3>
+                            <h4 class="subsubtitle">{{ _('VEJA NOSSAS PRODUÇÕES') }}</h4>
                             <img class="icon" src="{{ url_for('static',filename='img/doc.svg') }}">
                         </div>
                     </div>
@@ -63,34 +65,35 @@
                 <div class="l2">
                     <div class="home-card c3">
                         <div class="card-content" onclick="javascript:location.href = '/infraestrutura'">
-                            <h3 class="subtitle">Infraestrutura</h3>
+                            <h3 class="subtitle">{{ _('Infraestrutura') }}</h3>
                             <img class="icon" src="{{ url_for('static',filename='img/predio.svg') }}">
-                            <h4 class="subsubtitle">CONHEÇA O LABORATÓRIO</h4>
+                            <h4 class="subsubtitle">{{ _('CONHEÇA O LABORATÓRIO') }}</h4>
                         </div>
                     </div>
                     <div class="home-card c4">
                         <div class="card-content" onclick="javascript:location.href = '/partners'">
-                            <h3 class="subtitle">Parceiros</h3>
+                            <h3 class="subtitle">{{ _('Parceiros') }}</h3>
                             <img class="icon" src="{{ url_for('static',filename='img/user.svg') }}">
-                            <h4 class="subsubtitle">VEJA NOSSAS PARCERIAS</h4>
+                            <h4 class="subsubtitle">{{ _('VEJA NOSSAS PARCERIAS') }}</h4>
                         </div>
                     </div>
                 </div>
                 <div class="instagram">
                     <div class="c5">
-                        <h3 class="subtitle">Instagram</h3>
+                        <h3 class="subtitle">{{ _('Instagram') }}</h3>
                         <figure data-behold-id="Sszpjf92zjj7ttRHqeyo"></figure>
-                        <button class="p-button" style="display: block; margin: 30px auto 0;"  onclick="javascript:location.href = 'http://instagram.com'">SIGA-NOS NO INSTAGRAM</button>
+                        <button class="p-button" style="display: block; margin: 30px auto 0;"  onclick="javascript:location.href = 'http://instagram.com'">{{ _('SIGA-NOS NO INSTAGRAM') }}</button>
                     </div>
                 </div>
             </div>
         </section>
         {% include 'footer.html' %}
+        {% include 'scripts.html' %}
         <script>
             function showhide(id) {
                 var e = document.getElementById(id);
                 e.classList.toggle("show-menu");
             }
-          </script>
+        </script>
     </body>
 </html>

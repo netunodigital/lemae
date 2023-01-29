@@ -1,18 +1,48 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, session, redirect, url_for
+from flask_babel import Babel, gettext
 from contentful import Client
 
+# Contentful API connection
 client = Client(
     'r0iojhtvlgr2',
     'RaUhiKQRQMFANqWuoS4DTiVZXUPpNiBtFhiEv_7o1iw',
     environment='master'  # Optional - it defaults to 'master'.
 )
 
-app = Flask(__name__)
+def get_locale():
+    if request.args.get('language'):
+        session['language'] = request.args.get('language')
+    return session.get('language', 'pt')
 
+
+# Init app, session and babel
+app = Flask(__name__)
+app.config['BABEL_DEFAULT_LOCALE'] = 'pt'
+babel = Babel(app, locale_selector=get_locale)
+
+app.config['languages'] =  {
+    'pt': 'PT',
+    'en': 'EN'
+}
+app.secret_key = "super secret key"
+
+@app.context_processor
+def inject_conf_var():
+    return dict(AVAILABLE_LANGUAGES=app.config['languages'], 
+                CURRENT_LANGUAGE=session.get('language', 
+                                 request.accept_languages.best_match(app.config['languages'].keys())))
+
+# language route
+@app.route('/language=<language>')
+def set_language(language=None):
+    session['language'] = language
+    return redirect(url_for('index'))
+
+# Routes
 @app.route("/")
 def index():
     return render_template('index.html')
-    
+
 @app.route("/quem-somos")
 def about():
     members = client.entries({"content_type": "member"})
