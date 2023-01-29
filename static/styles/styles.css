@@ -431,24 +431,34 @@
                 font-weight: 500;
             }
 
-            #production .item {
+            #production .item,
+            #articles .item,
+            #books .item,
+            #prizes .item,
+            #links .item {
                 cursor: pointer;
                 transition: all 0.5s;
                 width: calc(100% - 15px);
                 margin-bottom: 20px;
             }
             
-            #production .item:hover {
+            #production .item:hover,
+            #articles .item:hover,
+            #books .item:hover,
+            #prizes .item:hover,
+            #links .item:hover {
                 padding-left: 10px;
                 border-left: solid 5px #FF9000;
+                width: calc(100% - 5px);
             }
 
             #production .author {
                 font-weight: 600;
-                margin-right: 10px;
+                margin-right: 5px;
                 font-size: 18px;                
             }
             #production .item-title {
+                font-weight: 500;
                 font-size: 18px;
 
             }
@@ -458,4 +468,32 @@
             #production .description span {
                 font-weight: 500;
                 color: #2B5FA7;
+            }
+
+            #articles .lattes {
+                font-weight: 500;
+                margin-right: 10px;           
+            }
+
+            #books .item-title {
+                font-weight: 500;
+                font-size: 18px;
+            }
+            #books .author {
+                font-weight: 500;
+                color: #2B5FA7;
+            }
+
+            #prizes .item-title {
+                font-weight: 500;
+                font-size: 18px;
+            }
+            #prizes .description {
+            }
+
+            #links .item-title {
+                font-weight: 500;
+                font-size: 18px;
+            }
+            #prilinkszes .description {
             }

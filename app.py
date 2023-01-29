@@ -74,8 +74,8 @@ def products():
 
 @app.route("/producao-cientifica")
 def production():
-    production = client.entries({"content_type": "academicProduction"})
-    articles = client.entries({"content_type": "article"})
+    production = client.entries({"content_type": "academicProduction", 'order': '-fields.year'})
+    articles = client.entries({"content_type": "article", 'order': '-fields.year'})
     books = client.entries({"content_type": "book"})
     patents = client.entries({"content_type": "patent"})
     prizes = client.entries({"content_type": "prize"})

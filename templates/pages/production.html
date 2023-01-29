@@ -10,22 +10,45 @@
                     <h3 class="subtitle">Teses e Dissertações</h3>
                     <div id="production">
                         {% for item in production %}
-                        <div class="item">
+                        <div class="item"  onclick="javascript:window.open('{{ item.link }}', '_blank');">
                             <span class="author">{{ item.author }}</span>
                             <span class="item-title">{{ item.title }}</span><br>
-                            <span class="description"><span>{{ item.type }}</span> | Orientação: {{ item.orientation }} | Programa: {{ item.program }}</span>
+                            <span class="description"><span>{{ item.type }}</span> | Orientação: {{ item.orientation }} | Programa: {{ item.program }} | {{ item.year }}</span>
                         </div>
                         {% endfor %}
                     </div>
                 </div>
                 <div class="container-card">
                     <h3 class="subtitle">Artigos</h3>
+                    <div id="articles">
+                        {% for item in articles %}
+                        <div class="item"  onclick="javascript:window.open('{{ item.link }}', '_blank');">
+                            <span class="lattes">{{ item.lattes }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
                 <div class="container-card">
                     <h3 class="subtitle">Livros</h3>
+                    <div id="books">
+                        {% for item in books %}
+                        <div class="item"  onclick="javascript:window.open('{{ item.link }}', '_blank');">
+                            <span class="item-title">{{ item.title }}</span><br>
+                            <span class="author">{{ item.author }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
                 <div class="container-card">
                     <h3 class="subtitle">Prêmios</h3>
+                    <div id="prizes">
+                        {% for item in prizes %}
+                        <div class="item"  onclick="javascript:window.open('{{ item.link }}', '_blank');">
+                            <span class="item-title">{{ item.title }}</span><br>
+                            <span class="description">{{ item.description }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </section>

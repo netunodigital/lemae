@@ -7,6 +7,14 @@
         <section id="container">
             <div class="content">
                 <div class="container-card">
+                    <div id="links">
+                        {% for item in links %}
+                        <div class="item"  onclick="javascript:window.open('{{ item.url }}', '_blank');">
+                            <span class="item-title">{{ item.title }}</span><br>
+                            <span class="description">{{ item.description }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </section>
