@@ -497,3 +497,34 @@
             }
             #prilinkszes .description {
             }
+
+
+            #contact span {
+                display: inline-block;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+
+            #partners {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 40px;
+            }
+            .partner-item {
+                width: 170px;
+                text-align: center;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+            .partner-item .photo {
+                width: 100%;
+                transition: all 0.5s;
+                cursor: pointer;
+                max-height: 100px;
+                object-fit: contain;
+            }
+            .partner-item .photo:hover {
+                transform: scale(1.05);
+            }

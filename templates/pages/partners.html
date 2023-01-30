@@ -8,12 +8,33 @@
             <div class="content">
                 <div class="container-card">
                     <h3 class="subtitle">Empresas</h3>
+                    <div id="partners">
+                    {% for item in partners %}
+                    <div class="partner-item" onclick="javascript:window.open('{{ item.link }}', '_blank');">
+                        <img class="photo" src="{{ item.logo.url() }}">
+                    </div>
+                    {% endfor %}
+                    </div>
                 </div>
                 <div class="container-card">
                     <h3 class="subtitle">Grupos de Pesquisa</h3>
+                    <div id="partners">
+                    {% for item in research_groups %}
+                    <div class="partner-item" onclick="javascript:window.open('{{ item.link }}', '_blank');">
+                        <img class="photo" src="{{ item.logo.url() }}">
+                    </div>
+                    {% endfor %}
+                    </div>
                 </div>
                 <div class="container-card">
                     <h3 class="subtitle">Agências de Fomento</h3>
+                    <div id="partners">
+                    {% for item in agencies %}
+                    <div class="partner-item" onclick="javascript:window.open('{{ item.link }}', '_blank');">
+                        <img class="photo" src="{{ item.logo.url() }}">
+                    </div>
+                    {% endfor %}
+                    </div>
                 </div>
             </div>
         </section>
