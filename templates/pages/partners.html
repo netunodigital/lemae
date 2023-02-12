@@ -21,7 +21,11 @@
                     <div id="partners">
                     {% for item in research_groups %}
                     <div class="partner-item" onclick="javascript:window.open('{{ item.link }}', '_blank');">
+                        {% if item.logo %}
                         <img class="photo" src="{{ item.logo.url() }}">
+                        {% else %}
+                        <span>{{ item.acronym }}</span>
+                        {% endif %}
                     </div>
                     {% endfor %}
                     </div>

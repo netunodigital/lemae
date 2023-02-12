@@ -555,6 +555,9 @@
                 text-align: center;
                 font-weight: 500;
                 margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             .partner-item .photo {
                 width: 100%;
@@ -564,6 +567,17 @@
                 object-fit: contain;
             }
             .partner-item .photo:hover {
+                transform: scale(1.05);
+            }
+            .partner-item span {
+                font-size: 28px;
+                cursor: pointer;
+                transition: all 0.5s;
+                font-weight: 600;
+                letter-spacing: 2px;
+            }
+            .partner-item span:hover {
+                color: #FF9000;
                 transform: scale(1.05);
             }
             #p-widget {
