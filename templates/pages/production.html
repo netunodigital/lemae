@@ -11,9 +11,7 @@
                     <div id="production">
                         {% for item in production %}
                         <div class="item"  onclick="javascript:window.open('{{ item.link }}', '_blank');">
-                            <span class="author">{{ item.author }}</span>
-                            <span class="item-title">{{ item.title }}</span><br>
-                            <span class="description"><span>{{ item.type }}</span> | Orientação: {{ item.orientation }} | Programa: {{ item.program }} | {{ item.year }}</span>
+                            <span class="lattes">{{ item.lattes }}</span>
                         </div>
                         {% endfor %}
                     </div>
@@ -33,8 +31,7 @@
                     <div id="books">
                         {% for item in books %}
                         <div class="item"  onclick="javascript:window.open('{{ item.link }}', '_blank');">
-                            <span class="item-title">{{ item.title }}</span><br>
-                            <span class="author">{{ item.author }}</span>
+                            <span class="lattes">{{ item.lattes }}</span>
                         </div>
                         {% endfor %}
                     </div>
@@ -44,8 +41,17 @@
                     <div id="prizes">
                         {% for item in prizes %}
                         <div class="item"  onclick="javascript:window.open('{{ item.link }}', '_blank');">
-                            <span class="item-title">{{ item.title }}</span><br>
-                            <span class="description">{{ item.description }}</span>
+                            <span class="lattes">{{ item.lattes }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="container-card">
+                    <h3 class="subtitle">Patentes</h3>
+                    <div id="prizes">
+                        {% for item in patents %}
+                        <div class="item"  onclick="javascript:window.open('{{ item.link }}', '_blank');">
+                            <span class="lattes">{{ item.lattes }}</span>
                         </div>
                         {% endfor %}
                     </div>

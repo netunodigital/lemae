@@ -9,25 +9,33 @@
                 <div class="container-card">
                     <h3 class="subtitle">Missão e Valores</h3>
                     <p class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum urna id lorem elementum, sit amet sodales lacus sagittis. Etiam quis lacus vel dolor volutpat tempor. Quisque vulputate est eu venenatis sollicitudin. Vestibulum maximus pulvinar lectus in eleifend. Sed lacinia placerat tristique. Mauris a eros vel odio ornare rhoncus vel in arcu. Duis est dui, pretium ac augue in, pretium tempor nulla. Aliquam nec finibus erat. Nullam maximus eu quam in consequat.
+                        <span style="font-weight: 600;">Missão</span><br>
+                        Desenvolver inovações tecnológicas e formar recursos humanos para a indústria química, para os setores de energia, construção civil e correlatos, visando sempre o bem-estar da sociedade e seu desenvolvimento sustentável.
                         <br><br>
-                        Donec at diam ac turpis accumsan ullamcorper eget et eros. Nulla rhoncus ex neque, et condimentum dolor accumsan in. Donec pellentesque, nisl quis tempus accumsan, mauris leo ultrices tellus, vel accumsan velit urna vitae arcu. In non lobortis sapien. Quisque a nulla diam. Nam eleifend turpis a tellus porta, in hendrerit velit tincidunt. Vestibulum tristique felis sed egestas semper. Sed ut purus posuere arcu mattis tristique gravida ac libero.
+                        <span style="font-weight: 600;">Valores</span><br>
+                        Guiar todas as nossas ações por princípios éticos e morais, prezando sempre pela segurança e saúde das pessoas; e pelo uso correto do patrimônio público.
                     </p>
                 </div>
                 <div class="container-card">
                     <h3 class="subtitle">Coordenação</h3>
                     <div class="membros">
                         <div class="member">
-                            <img class="photo" src="{{ url_for('static',filename='img/membro.png') }}">
+                            <img class="photo" src="{{ url_for('static',filename='img/michelle.jpg') }}">
                             <div class="info">
                                 <span class="name">Michelle Jakeline Cunha Rezende</span>
-                                <span class="cargo">Coordenadora</span>
-                                <span class="lattes">LATTES</span>
+                                <span class="cargo">Doutora em Química</span>
+                                <span class="emails">michelle@iq.ufrj.br<br>mjcrezende@gmail.com</span>
+                                <span class="lattes" onclick="window.open('http:\/\/lattes.cnpq.br/8174906526130941', '_blank' );">LATTES</span>
                             </div>
                         </div>
                         <div class="member">
-                            <img class="photo" src="{{ url_for('static',filename='img/membro.png') }}">
-                            <div class="info"></div>
+                            <img class="photo" src="{{ url_for('static',filename='img/simone.gif') }}">
+                            <div class="info">
+                                <span class="name">Simone Pereira da Silva Ribeiro</span>
+                                <span class="cargo">Doutora em Química</span>
+                                <span class="emails">spsilva@iq.ufrj.br<br>spquimica@yahoo.com.br</span>
+                                <span class="lattes" onclick="window.open('http:\/\/lattes.cnpq.br/9594407695128502', '_blank' );">LATTES</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -40,7 +48,7 @@
                             <div class="info">
                                 <span class="name">{{ member.name }}</span>
                                 <span class="cargo">{{ member.role }}</span>
-                                <span class="lattes">LATTES</span>
+                                <span class="lattes" onclick="window.open({{ member.lattes }}, '_blank' );">LATTES</span>
                             </div>
                         </div>
                         {% endfor %}
@@ -49,20 +57,13 @@
                 <div class="container-card">
                     <h3 class="subtitle">Egressos</h3>
                     <div class="egressos">
-                        <table id="past-members">
-                            <thead>
-                                <th>Nome</th>
-                                <th>Atuação</th>
-                                <th>Local de Trabalho Atual</th>
-                            </thead>
-                        {% for member in past_members %}
-                        <tr>
-                            <td class="name">{{ member.name }}</td>
-                            <td class="cargo">{{ member.role }}</td>
-                            <td class="cargo">{{ member.workplace }}</td>
-                        </tr>
+                        {% for item in past_members %}
+                        <div class="item" style="margin-bottom: 20px;">
+                            <span class="author" style="font-weight: 600;">{{ item.name }}</span>
+                            <br><span class="item-title">{{ item.description }}</span><br>
+                            Ocupação atual: {{ item.orientation }} | Ano de saída: {{ item.year }}</span>
+                        </div>
                         {% endfor %}
-                        </table>
                     </div>
                 </div>
             </div>

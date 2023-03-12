@@ -400,10 +400,10 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 40px;
+                gap: 20px;
             }
             .member {
-                width: calc(50% - 20px);
+                width: calc(50% - 10px);
                 min-width: 300px;
                 height: 150px;
                 display: flex;
@@ -417,12 +417,12 @@
                 object-fit: cover;
             }
             .member .info {
-                width: calc(100% - 190px);
+                width: calc(100% - 170px);
                 height: 150px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                margin: 0 20px;
+                margin: 0 0 0 20px;
             }
             .member .info .name {
                 font-weight: 600;
@@ -430,6 +430,11 @@
             .member .info .cargo {
                 color: #2B5FA7;
                 font-weight: 500;
+                margin: 5px 0 5px
+            }
+            .member .info .emails {
+                color: #333;
+                font-size: 14px;
                 margin: 5px 0 30px
             }
             .member .info .lattes {
@@ -508,7 +513,7 @@
                 color: #2B5FA7;
             }
 
-            #articles .lattes {
+            .lattes {
                 font-weight: 500;
                 margin-right: 10px;           
             }

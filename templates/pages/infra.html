@@ -7,12 +7,38 @@
         <section id="container">
             <div class="content">
                 <div class="container-card">
-                    <h3 class="subtitle">Laboratório</h3>
+                    <h3 class="subtitle">Laboratórios</h3>
                     <p class="text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla bibendum urna id lorem elementum, sit amet sodales lacus sagittis. Etiam quis lacus vel dolor volutpat tempor. Quisque vulputate est eu venenatis sollicitudin. Vestibulum maximus pulvinar lectus in eleifend. Sed lacinia placerat tristique. Mauris a eros vel odio ornare rhoncus vel in arcu. Duis est dui, pretium ac augue in, pretium tempor nulla. Aliquam nec finibus erat. Nullam maximus eu quam in consequat.
-                        <br><br>
-                        Donec at diam ac turpis accumsan ullamcorper eget et eros. Nulla rhoncus ex neque, et condimentum dolor accumsan in. Donec pellentesque, nisl quis tempus accumsan, mauris leo ultrices tellus, vel accumsan velit urna vitae arcu. In non lobortis sapien. Quisque a nulla diam. Nam eleifend turpis a tellus porta, in hendrerit velit tincidunt. Vestibulum tristique felis sed egestas semper. Sed ut purus posuere arcu mattis tristique gravida ac libero.
-                    </p>
+O <span style="font-weight: 600;">Laboratório de Transformações Químicas</span> está localizado na sala B107, possui aproximadamente 32 m2 e conta com um conjunto de bancadas e armários, capela com exaustão, sistema de alto-vácuo, e equipamentos de pequeno porte como rotaevaporadores, bombas de vácuo, banhos termostáticos, placas de aquecimento e agitação, mantas aquecedoras, banho de ultrassom, balança analítica, estufa para secagem de vidrarias e freezers para armazenamento de reagentes e produtos.
+
+<br><br>
+
+O <span style="font-weight: 600;">Laboratório de Avaliação de Desempenho de Produtos</span> está localizado na sala B106, possui aproximadamente 20 m2 e conta com bancadas e armários, balança analítica, estufa com temperatura controlada, pHmetro de bancada, e aparelhagem para avaliar a eficiência de produtos e formulações como inibidores de incrustação inorgânica.
+
+<br><br>
+
+O <span style="font-weight: 600;">Laboratório de Ensaios de Reação ao Fogo</span> está localizado na sala B103, possui aproximadamente 28 m2 e conta com bancadas, armários e sistema de exaustão. O laboratório possui equipamentos para medição do índice limite de oxigênio – LOI (ISO 4589-2) e glow-wire (ponta incandescente - IEC 60695-2-10 e IEC 60695-2-12), aparelhagem para realização de ensaio de classificação da queima vertical - UL-94, medição da relação tempo vs temperatura para revestimentos, e possui também cromatógrafo em fase gasosa com detecção simultânea por espectrômetro de massas e detector por ionização em chama.
+
+<br><br>
+
+O <span style="font-weight: 600;">Laboratório de Análise Térmica</span> está localizado na sala A103, possui aproximadamente 18 m2, e está equipado com bancadas, armários, um analisador termogravimétrico (TGA) e um analisador térmico por calorimetria exploratória diferencial (DSC).
+
+<br><br>
+
+O <span style="font-weight: 600;">Laboratório de Microscopia</span> está localizado na sala A110, possui aproximadamente 9 m2, e está equipado com um microscópio ótico de aquecimento.
+
+</p>
+                </div>
+                <div class="container-card">
+                    <h3 class="subtitle">Ambientes</h3>
+                    <div id="equipments">
+                        {% for item in environments %}
+                        <div class="item">
+                            <img class="photo" src="{{ item.image.url() }}">
+                            <span class="name">{{ item.name }}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
                 </div>
                 <div class="container-card">
                     <h3 class="subtitle">Equipamentos</h3>

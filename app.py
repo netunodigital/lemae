@@ -62,9 +62,11 @@ def reasearch():
 @app.route("/infraestrutura")
 def infra():
     equipments = client.entries({"content_type": "equipment"})
+    environments = client.entries({"content_type": "environment"})
     return render_template('pages/infra.html', 
                            title="Infraestrutura",
-                           equipments=equipments)
+                           equipments=equipments,
+                           environments=environments)
 
 @app.route("/produtos-desenvolvidos")
 def products():
