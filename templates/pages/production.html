@@ -36,6 +36,7 @@
                         {% endfor %}
                     </div>
                 </div>
+                {% if prizes|length > 0 %}
                 <div class="container-card">
                     <h3 class="subtitle">Prêmios</h3>
                     <div id="prizes">
@@ -46,6 +47,8 @@
                         {% endfor %}
                     </div>
                 </div>
+                {% endif %}
+                {% if patents|length > 0 %}
                 <div class="container-card">
                     <h3 class="subtitle">Patentes</h3>
                     <div id="prizes">
@@ -56,6 +59,7 @@
                         {% endfor %}
                     </div>
                 </div>
+                {% endif %}
             </div>
         </section>
         {% include 'footer.html' %}

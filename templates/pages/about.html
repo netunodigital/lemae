@@ -42,13 +42,80 @@
                 <div class="container-card">
                     <h3 class="subtitle">Equipe</h3>
                     <div class="membros">
-                        {% for member in members %}
+                        {% if members.rsc %}
+                        <span style="font-weight: 600; width: 100%; margin-top: 10px;">Pesquisadores</span>
+                        {% endif %}
+                        {% for member in members.rsc %}
                         <div class="member">
                             <img class="photo" src="{{ member.photo.url() }}">
                             <div class="info">
                                 <span class="name">{{ member.name }}</span>
-                                <span class="cargo">{{ member.role }}</span>
+                                {% if member.project %}
+                                <span class="cargo">{{ member.project }}</span>
+                                {% endif %}
+                                {% if member.lattes %}
                                 <span class="lattes" onclick="window.open({{ member.lattes }}, '_blank' );">LATTES</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <span style="font-weight: 600; width: 100%; margin-top: 10px;">Doutorado</span>
+                        {% for member in members.phd %}
+                        <div class="member">
+                            <img class="photo" src="{{ member.photo.url() }}">
+                            <div class="info">
+                                <span class="name">{{ member.name }}</span>
+                                {% if member.project %}
+                                <span class="cargo">{{ member.project }}</span>
+                                {% endif %}
+                                {% if member.lattes %}
+                                <span class="lattes" onclick="window.open({{ member.lattes }}, '_blank' );">LATTES</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <span style="font-weight: 600; width: 100%; margin-top: 10px;">Mestrado</span>
+                        {% for member in members.msc %}
+                        <div class="member">
+                            <img class="photo" src="{{ member.photo.url() }}">
+                            <div class="info">
+                                <span class="name">{{ member.name }}</span>
+                                {% if member.project %}
+                                <span class="cargo">{{ member.project }}</span>
+                                {% endif %}
+                                {% if member.lattes %}
+                                <span class="lattes" onclick="window.open({{ member.lattes }}, '_blank' );">LATTES</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <span style="font-weight: 600; width: 100%; margin-top: 10px;">Iniciação Científica</span>
+                        {% for member in members.ic %}
+                        <div class="member">
+                            <img class="photo" src="{{ member.photo.url() }}">
+                            <div class="info">
+                                <span class="name">{{ member.name }}</span>
+                                {% if member.project %}
+                                <span class="cargo">{{ member.project }}</span>
+                                {% endif %}
+                                {% if member.lattes %}
+                                <span class="lattes" onclick="window.open({{ member.lattes }}, '_blank' );">LATTES</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                        <span style="font-weight: 600; width: 100%; margin-top: 10px;">Trabalho de Conclusão de Curso</span>
+                        {% for member in members.tcc %}
+                        <div class="member">
+                            <img class="photo" src="{{ member.photo.url() }}">
+                            <div class="info">
+                                <span class="name">{{ member.name }}</span>
+                                {% if member.project %}
+                                <span class="cargo">{{ member.project }}</span>
+                                {% endif %}
+                                {% if member.lattes %}
+                                <span class="lattes" onclick="window.open({{ member.lattes }}, '_blank' );">LATTES</span>
+                                {% endif %}
                             </div>
                         </div>
                         {% endfor %}
@@ -57,13 +124,62 @@
                 <div class="container-card">
                     <h3 class="subtitle">Egressos</h3>
                     <div class="egressos">
-                        {% for item in past_members %}
-                        <div class="item" style="margin-bottom: 20px;">
-                            <span class="author" style="font-weight: 600;">{{ item.name }}</span>
-                            <br><span class="item-title">{{ item.description }}</span><br>
-                            Ocupação atual: {{ item.orientation }} | Ano de saída: {{ item.year }}</span>
-                        </div>
-                        {% endfor %}
+                        <div class="membros">
+                            {% if past_members.rsc %}
+                            <span style="font-weight: 600; width: 100%; margin-top: 10px;">Pesquisadores</span>
+                            {% for item in past_members.rsc %}
+                            <div class="item" style="margin-bottom: 20px;">
+                                <span class="author" style="font-weight: 600;">{{ item.name }}</span>
+                                <br><span class="item-title">{{ item.description }}</span><br>
+                                Ocupação atual: {{ item.workplace }} | Ano de saída: {{ item.year }}</span>
+                            </div>
+                            </div>
+                            {% endfor %}
+                            {% endif %}
+                            {% if past_members.phd %}
+                            <span style="font-weight: 600; width: 100%; margin-top: 10px;">Doutorado</span>
+                            {% for item in past_members.phd %}
+                            <div class="item" style="margin-bottom: 20px;">
+                                <span class="author" style="font-weight: 600;">{{ item.name }}</span>
+                                <br><span class="item-title">{{ item.description }}</span><br>
+                                Ocupação atual: {{ item.workplace }} | Ano de saída: {{ item.year }}</span>
+                            </div>
+                            </div>
+                            {% endfor %}
+                            {% endif %}
+                            {% if past_members.msc %}
+                            <span style="font-weight: 600; width: 100%; margin-top: 10px;">Mestrado</span>
+                            {% for item in past_members.msc %}
+                            <div class="item" style="margin-bottom: 20px;">
+                                <span class="author" style="font-weight: 600;">{{ item.name }}</span>
+                                <br><span class="item-title">{{ item.description }}</span><br>
+                                Ocupação atual: {{ item.workplace }} | Ano de saída: {{ item.year }}</span>
+                            </div>
+                            </div>
+                            {% endfor %}
+                            {% endif %}
+                            {% if past_members.ic %}
+                            <span style="font-weight: 600; width: 100%; margin-top: 10px;">Iniciação Científica</span>
+                            {% for item in past_members.ic %}
+                            <div class="item" style="margin-bottom: 20px;">
+                                <span class="author" style="font-weight: 600;">{{ item.name }}</span>
+                                <br><span class="item-title">{{ item.description }}</span><br>
+                                Ocupação atual: {{ item.workplace }} | Ano de saída: {{ item.year }}</span>
+                            </div>
+                            </div>
+                            {% endfor %}
+                            {% endif %}
+                            {% if past_members.tcc %}
+                            <span style="font-weight: 600; width: 100%; margin-top: 10px;">Trabalho de Conclusão de Curso</span>
+                            {% for item in past_members.tcc %}
+                            <div class="item" style="margin-bottom: 20px;">
+                                <span class="author" style="font-weight: 600;">{{ item.name }}</span>
+                                <br><span class="item-title">{{ item.description }}</span><br>
+                                Ocupação atual: {{ item.workplace }} | Ano de saída: {{ item.year }}</span>
+                            </div>
+                            </div>
+                            {% endfor %}
+                            {% endif %}
                     </div>
                 </div>
             </div>

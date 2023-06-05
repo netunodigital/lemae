@@ -399,7 +399,7 @@
             .membros {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: center;
+                justify-content: flex-start;
                 gap: 20px;
             }
             .member {
@@ -442,6 +442,11 @@
                 text-transform: uppercase;
                 font-weight: 600;
                 cursor: pointer;
+            }
+
+            .egressos .item-title {
+                font-weight: 500;
+                color: #2B5FA7;
             }
 
             #past-members {

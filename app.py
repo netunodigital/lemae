@@ -45,12 +45,29 @@ def index():
 
 @app.route("/quem-somos")
 def about():
-    members = client.entries({"content_type": "member"})
-    past_members = client.entries({"content_type": "pastMember"})
-    return render_template('pages/about.html', 
+    phd = client.entries({"content_type": "member", "fields.role": "Doutorado"})
+    msc = client.entries({"content_type": "member", "fields.role": "Mestrado"})
+    ic = client.entries({"content_type": "member", "fields.role": "Iniciação Científica"})
+    tcc = client.entries({"content_type": "member", "fields.role": "Trabalho de Conclusão de Curso"})
+    rsc = client.entries({"content_type": "member", "fields.role": "Pesquisador"})
+    phd2 = client.entries({"content_type": "pastMember", "fields.type": "Doutorado", 'order': '-fields.year'})
+    msc2 = client.entries({"content_type": "pastMember", "fields.type": "Mestrado", 'order': '-fields.year'})
+    ic2 = client.entries({"content_type": "pastMember", "fields.type": "Iniciação Científica", 'order': '-fields.year'})
+    tcc2 = client.entries({"content_type": "pastMember", "fields.type": "Trabalho de Conclusão de Curso", 'order': '-fields.year'})
+    rsc2 = client.entries({"content_type": "pastMember", "fields.type": "Pesquisador", 'order': '-fields.year'})
+ 
+    return render_template('pages/about.html',
                            title="Quem Somos",
-                           members=members,
-                           past_members=past_members)
+                           members={"phd": phd,
+                                    "msc": msc,
+                                    "ic": ic,
+                                    "tcc": tcc,
+                                    "rsc": rsc},
+                           past_members={"phd": phd2,
+                                    "msc": msc2,
+                                    "ic": ic2,
+                                    "tcc": tcc2,
+                                    "rsc": rsc2})
 
 @app.route("/linhas-de-pesquisa")
 def reasearch():
@@ -113,4 +130,4 @@ def contact():
                            title="Contato")
 
 if __name__=="__main__":
-    app.run(debug=False, host="0.0.0.0")
+    app.run(debug=True, host="0.0.0.0")
